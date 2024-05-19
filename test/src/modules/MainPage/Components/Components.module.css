@@ -1,10 +1,6 @@
 .mainpage {
     background: rgb(0,0,10);
     background: linear-gradient(90deg, rgba(0,0,10,1) 0%, rgba(0,10,10,1) 25%, rgba(20,41,44,1) 50%, rgba(0,0,10,1) 75%, rgba(0,0,10,1) 100%);
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
 }
 
 .uppertextcontainer {
@@ -12,6 +8,8 @@
     margin-top: 68px;
     width: 372px;
     height: 43px;
+    margin-left: 43.25%;
+    margin-bottom: 50px;
 }
 
 .upper {
@@ -28,7 +26,7 @@
     justify-content: center;
     width: 1666px;
     height: 85px;
-    margin-top: 801px;
+    margin-top: 50px;
 }
 
 .maintext1 {

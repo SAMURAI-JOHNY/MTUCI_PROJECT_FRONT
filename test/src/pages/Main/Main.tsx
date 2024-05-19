@@ -16,7 +16,7 @@ export const Main: React.FC = () => {
         <div className={styles.mainpage}>
             <Header />
             <UpperText />
-            <News /> 
+            <News />
             <MainText />
             <UpperIcons />
             <LowerIcons />

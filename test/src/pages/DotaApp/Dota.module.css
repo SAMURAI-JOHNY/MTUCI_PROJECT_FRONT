@@ -1,0 +1,234 @@
+@font-face {
+    font-family: 'Goudy Trajan Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Goudy Trajan Regular'), local('GoudyTrajan-Regular'),
+        url(http://allfont.net/cache/fonts/goudy-trajan-regular_9c60d369eeef3d3ea1e3ddaa07f3e15f.woff) format('woff'),
+        url(http://allfont.net/cache/fonts/goudy-trajan-regular_9c60d369eeef3d3ea1e3ddaa07f3e15f.ttf) format('truetype');
+}
+
+.dotapage {
+    background: rgb(0,0,10);
+    background: linear-gradient(90deg, rgba(0,0,10,1) 0%, rgba(0,10,10,1) 25%, rgba(20,41,44,1) 50%, rgba(0,0,10,1) 75%, rgba(0,0,10,1) 100%);
+}
+
+.banner1 {
+    width: 100%;
+    height: 903px;
+    position: relative;
+}
+
+.gradient {
+    height: 100%;
+    width: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.006039915966386533) 25%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgba(0,0,0,1) 100%);
+    position: absolute;
+}
+
+.banner1img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.banner1text {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 800px;
+    height: 160px;
+    color: white;
+    font-size: 50px;
+    font-weight: 500;
+    text-align: center;
+    top: 288px;
+    left: 28%;
+    font-family: 'Goudy Trajan Regular';
+}
+
+.banner2 {
+    width: 100%;
+    height: 748px;
+    position: relative;
+}
+
+.banner2img1 {
+    position: absolute;
+    width: 1300px;
+    height: 100%;
+    display: flex;
+}
+
+.banner2img2 {
+    position: absolute;
+    width: 1344px;
+    height: 100%;
+    display: flex;
+    margin-left: 512px;
+    margin-top: 0px;
+}
+
+.banner3 {
+    position: relative;
+    background-color: #010A13;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 974px;
+    border: 3px solid #C14140;
+    border-radius: 44px;
+}
+
+.arrow {
+    position: absolute;
+    width: 80px;
+    height: 50px;
+    margin-left: 1300px;
+    margin-top: 455px;
+}
+
+.arrow div {
+    position: absolute;
+    top: 20px;
+    width: 45px;
+    height: 10px;
+    background-color: white;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    left:0;
+    display: block;
+    rotate: 90deg;
+}
+
+.arrow div::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 10px;
+    top: -11px;
+    right: -8px;
+    background-color: white;
+    transform: rotate(45deg);
+}
+.arrow div::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 10px;
+    top: 11px;
+    right: -8px;
+    background-color: white;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    transform: rotate(-45deg);
+}
+
+.headertext {
+    position: absolute;
+    width: 491px;
+    height: 43px;
+    margin-top: 50px;
+    margin-left: 35%;
+    font-family: 'Goudy Trajan Regular';
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+}
+
+.banner3img1 {
+    position: absolute;
+    display: flex;
+    width: 400px;
+    height: 400px;
+    margin-top: 50px;
+    margin-left: 1128px;
+}
+
+.banner3img2 {
+    position: absolute;
+    display: flex;
+    width: 515px;
+    height: 400px;
+    margin-left: 1078px;
+    margin-top: 530px;
+    opacity: .8;
+    border: 20px solid linear-gradient(90deg, rgba(0,0,10,.5) 0%, rgba(0,10,10,.5) 25%, rgba(20,41,44,.5) 50%, rgba(0,0,10,.5) 75%, rgba(0,0,10,.5) 100%);
+    border-radius: 20px;
+}
+
+.banner3img3 {
+    position: absolute;
+    display: flex;
+    width: 110px;
+    height: 110px;
+    margin-top: 80px;
+    margin-left: 1090px;
+}
+
+.banner3img4 {
+    position: absolute;
+    display: flex;
+    width: 110px;
+    height: 110px;
+    margin-top: 540px;
+    margin-left: 1090px;
+}
+
+.banner3text1 {
+    display: flex;
+    position: absolute;
+    width: 1050px;
+    height: 60px;
+    margin-top: 200px;
+    margin-left: 90px;
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+
+.banner3text2 {
+    color: white;
+    width: 772px;
+    height: 30px;
+    margin-top: 300px;
+    margin-left: 90px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.spisok {
+    position: absolute;
+    color: white;
+    width: 250px;
+    height: 30px;
+    margin-top: 80px;
+    margin-left: 300px;
+    font-size: 30px;
+    font-weight: 550;
+}
+
+.li {
+    list-style: disc;
+    margin-top: 15px;
+}
+
+.click {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 375px;
+    height: 50px;
+    margin-left: 225px;
+    margin-top: 500px;
+    font-weight: 550;
+    font-size: 26px;
+    color: white;
+    border: 2px solid #C14140;
+    border-radius: 6px;
+    cursor: pointer;
+}

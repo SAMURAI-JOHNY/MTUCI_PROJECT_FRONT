@@ -5,23 +5,27 @@ import { VideoContainer } from '../../components/VideoCantainer/VideoContainer.t
 import { Banner1 } from '../../modules/DotaPage/Banner1.tsx';
 import { Banner2 } from '../../modules/DotaPage/Banner2.tsx';
 import { Banner3 } from '../../modules/DotaPage/Banner3.tsx';
-import { CoursItem } from '../../components/CoursBlock/CoursItem/CoursItem.tsx';
-import dota from './../../modules/DotaPage/Images/dota.png'
-import titan from './../../modules/DotaPage/Images/titan.png'
-import video from './../LoLApp/MPContent/serega.mp4'
+import { CoursBlock } from '../../components/CoursBlock/LoLCoursBlock.tsx';
+import video from './MPContent/serega.mp4'
+import { RegistrationForm } from '../../modules/RegistrationForm/RegistrationForm.tsx';
 import { Links } from '../../modules/MainPage/Components/Links.tsx';
+import { CoursItemsDota } from '../../components/CoursBlock/CoursItems.ts';
+import { useAppSelector } from '../../hooks/redux.ts';
+
 
 
 export const Dota: React.FC = () => {
 
+    const {display} = useAppSelector(state => state.registrationReducer)
+
     return (
     
         <div className={styles.dotapage}>
+            {display ? <RegistrationForm/> : ''}
             <Header />
             <VideoContainer description='Представляем блок курсов по dota 2' videoUrl={video}/>
             <Banner1 />
-            <CoursItem titleIcon={dota} title={'ЧТО ТАКОЕ ДОТА?'} timeInfo={'6 часов/5 блоков'} thesis={['Основные механики игры']} dota={true}/>
-            <CoursItem titleIcon={titan} title={'ЧТО ТАКОЕ ДОТА?'} timeInfo={'6 часов/5 блоков'} thesis={['Продвинутые механики игры']} dota={true}/>
+            <CoursBlock dota = {true} items = {CoursItemsDota}/>
             <Banner2 />
             <Banner3 />
             <Links />

@@ -20,6 +20,9 @@
 .logInCaontainer {
     overflow: hidden;
     transition: 1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -138,4 +141,34 @@ span {
     background-image: url('./Picture.png');
     background-size: cover;
     border-radius: 20px;
+}
+
+.emailTitle {
+    margin-bottom: 20px;
+    color: #fbbb43;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.verifyMenu {
+    transition: 1s ease;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .toogleMenu {
+        display: none;
+    }
+
+    .wrapper {
+        width: 400px;
+    }
 }

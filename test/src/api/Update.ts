@@ -1,9 +1,9 @@
 import axios from "axios";
 
 
-export const updateTokens = () => {
+export const updateTokens = async () => {
 
-    axios.post('api/token/verify/', { refresh: localStorage.getitem('refreshToken')})
+    await axios.post('api/token/update', { refresh: localStorage.getitem('refreshToken')})
   
     .then(response => {
   

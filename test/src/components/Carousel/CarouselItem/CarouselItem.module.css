@@ -35,3 +35,24 @@
     left: 20%;
     transition: 0.3s ease;
 }
+
+@media (max-width: 768px) {
+    .wrapper {
+        width: 120px;
+        height: 150px;
+    }
+
+    .container {
+        width: 115px;
+        height: 145px;
+    }
+
+    .container:hover {
+        width: 118px;
+        height: 148px;
+    }
+
+    .container:hover .title {
+        top: 80%;
+    }
+}

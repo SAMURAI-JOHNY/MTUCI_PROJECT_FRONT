@@ -8,8 +8,8 @@
 }
 
 .dotapage {
-    background: rgb(0,0,10);
-    background: linear-gradient(90deg, rgba(0,0,10,1) 0%, rgba(0,10,10,1) 25%, rgba(20,41,44,1) 50%, rgba(0,0,10,1) 75%, rgba(0,0,10,1) 100%);
+    width: 100%;
+    background-color: #000000;
 }
 
 .banner1 {

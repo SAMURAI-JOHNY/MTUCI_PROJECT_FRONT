@@ -26,7 +26,7 @@ export const Banner3: React.FC = () => {
                 <p className={styles.banner3text1}>У многих игроков есть свои любимые герои, однако зачастую они не могут показать высокий уровень исполнения на этих персонажах.</p>
                 <p className={styles.banner3text2}>Данный набор гайдов создан для того чтобы исправить эту проблему.</p>
                 <ul className={styles.spisok}>
-                    {markers.map(item => <li className={styles.li}>{item}</li>)}
+                    {markers.map((item, key) => <li key = {key} className={styles.li}>{item}</li>)}
                 </ul>
                 <p onClick={() => redirect('http://localhost:3000/Dota')} className={styles.click}>Посмотреть список гайдов</p>
             </div>

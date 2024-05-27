@@ -1,6 +1,7 @@
 import React from "react";
 
 
+const width: number = window.innerWidth
 
 interface TextBlockProps {
     decsription: string,
@@ -27,8 +28,8 @@ export const TextBlock: React.FC<TextBlockProps> = (props: TextBlockProps) => {
         color: '#fff',
         height: props.height,
         fontWeight: '700',
-        lineHeight: '36.6px',
-        fontSize: '30px',
+        lineHeight: width > 768 ? '30px' : '20px',
+        fontSize: width > 768 ? '36.6px' : '16px',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -37,7 +38,7 @@ export const TextBlock: React.FC<TextBlockProps> = (props: TextBlockProps) => {
 
     return(
 
-        <div style={styles}>
+        <div  style={styles}>
         <div style = {{whiteSpace: 'pre-wrap'}}>{props.decsription}</div>
         </div>
 

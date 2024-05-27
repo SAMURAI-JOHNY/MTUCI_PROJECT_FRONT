@@ -5,8 +5,7 @@ import  {animate, motion, useMotionValue} from "framer-motion"
 import useMeasure from "react-use-measure"
 
 
-
-
+//В папке './CarouselItem' находятся импорты массивов изображений
 
 
 export interface Item {
@@ -27,14 +26,14 @@ export const Carousel: React.FC<CarouselProps> = (props: CarouselProps) => {
 
     const [ ref, {width} ] = useMeasure()
     
-
     const xTranslation = useMotionValue(0);
 
+    //Анимация карусели
     React.useEffect(() => {
-        const len = props.items.length
-        var speed = props.speed
-        let controls;
-        let finalPosition =  -width * len 
+        const len: number = props.items.length
+        var speed: number = props.speed
+        let controls: any;
+        let finalPosition: number =  -width * len 
 
         controls = animate(xTranslation, props.side === 'left' ?  [0, finalPosition] : [finalPosition, 0],{
             ease: 'linear',

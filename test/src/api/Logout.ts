@@ -1,9 +1,9 @@
 import axios from 'axios'
 
 
-export const LogOut = () => {
+export const LogOut = async () => {
 
-    axios.post('url', {
+    await axios.post('url', {
 
         refresh_token: localStorage.getItem('refreshToken'),
 

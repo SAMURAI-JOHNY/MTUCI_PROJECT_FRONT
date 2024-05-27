@@ -7,20 +7,24 @@ import { LogInApi } from "../../../../api/LogIn.ts";
 
 export const LogIn: React.FC = () => {
     
-    const [show, setShow] = React.useState(false) //Пароль
+    //Отображение пароля
+    const [show, setShow] = React.useState(false) 
     const handleClick = () => setShow(!show)
     
-    const {toogled} = useAppSelector(state => state.formReducer) //Отоборажение разных частей
+    //Импорт redux для toogle элементов
+    const {toogled} = useAppSelector(state => state.formReducer)
     const {swap} = formSlice.actions
     const dispatch = useAppDispatch()
 
+    //Интерфейс данных
     interface formDataProps {
-        name: string;
+        username: string;
         password: string;
     }
 
+
     const [formData, setFormData] = React.useState<formDataProps>({
-        name: "",
+        username: "",
         password: ""
     })
 
@@ -30,10 +34,11 @@ export const LogIn: React.FC = () => {
         setFormData(formData => ({...formData, [name]: value}))
     }
 
+    //Ресет формы при смене toogle элементов
     const resetForm = () => {
         dispatch(swap())
         setFormData(prevState => ({
-            name: "",
+            username: "",
             password: ""
         }))
     }
@@ -41,12 +46,13 @@ export const LogIn: React.FC = () => {
 
     return (
 
-        <div className={styles.wrapper} > 
+        <div className={styles.wrapper} >
+            
         <div className={styles.logInCaontainer} style={{opacity: toogled? '0' : '1'}}>
             <div className={styles.logIn} style = {{left: toogled ? '100%' : '0%'}}>
                 <span className= {styles.title}>Рады видеть вас!</span>
 
-                <input className={styles.inputName} name = "name" placeholder='Name' value={formData.name} onChange={handleChange}></input>
+                <input className={styles.inputName} name = "username" placeholder='Name' value={formData.username} onChange={handleChange}></input>
 
                 <div className = {styles.inputGroup}>
                     <input className={styles.inputPassword} name = "password" value={formData.password} onChange={handleChange}

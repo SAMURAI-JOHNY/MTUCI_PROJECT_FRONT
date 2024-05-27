@@ -7,13 +7,17 @@ import { UpperIcons } from '../../modules/MainPage/Components/UpperIcons.tsx';
 import { LowerIcons } from './../../modules/MainPage/Components/LowerIcons.tsx';
 import { Links } from './../../modules/MainPage/Components/Links.tsx';
 import { News } from './../../components/NewsCarousel/News.tsx'
-
+import { useAppSelector } from '../../hooks/redux.ts';
+import { RegistrationForm } from '../../modules/RegistrationForm/RegistrationForm.tsx';
 
 export const Main: React.FC = () => {
+
+    const {display} = useAppSelector(state => state.registrationReducer)
 
     return (
     
         <div className={styles.mainpage}>
+            {display ? <RegistrationForm/> : ''}
             <Header />
             <UpperText />
             <News />

@@ -3,6 +3,7 @@
     height: 400px;
     display: flex;
     background-color: hsl(220, 24%, 10%);
+    transition: 1s ease;
 }
 
 .logIn {
@@ -139,4 +140,15 @@ span {
     background-image: url('./Picture.png');
     background-size: cover;
     border-radius: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .toogleMenu {
+        display: none;
+    }
+
+    .wrapper {
+        width: 400px;
+    }
 }

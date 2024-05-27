@@ -1,8 +1,8 @@
 import React from "react";
 import styles from './LoLCoursBlock.module.css'
 import { CoursItem } from "./CoursItem/CoursItem.tsx";
-import { CoursItems } from "./CoursItems.ts";
 
+//Импорт блоков для курсов в папке '.CoursItems.ts'
 
 interface Item {
     title: string
@@ -24,7 +24,7 @@ export const CoursBlock: React.FC<CoursBlockProps> = (props: CoursBlockProps) =>
 
         <div className={styles.wrapper}>
             <div className={styles.container}>
-                {props.items.map(item => <CoursItem titleIcon = {item.titleIcon} title = {item.title} timeInfo = {item.timeInfo} thesis = {item.thesis} dota = {props.dota}/>)}
+                {props.items.map((item, key) => <CoursItem key = {key} titleIcon = {item.titleIcon} title = {item.title} timeInfo = {item.timeInfo} thesis = {item.thesis} dota = {props.dota}/>)}
             </div>
         </div>
 

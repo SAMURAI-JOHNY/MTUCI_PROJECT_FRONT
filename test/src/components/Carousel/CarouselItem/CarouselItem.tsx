@@ -19,7 +19,7 @@ export const CarouselItem: React.FC<CarouselItemProps> = ({image, name}: Carouse
     
         <div className = {styles.wrapper}>
             <div className= {styles.container} style = {{backgroundImage: `url(${image})`}}>
-                <text className= {styles.title}>{name}</text>
+                <span className= {styles.title}>{name}</span>
             </div>
         </div>
 

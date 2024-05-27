@@ -14,7 +14,6 @@
     width: 100%;
     height: 100%;
     position: relative;
-    min-width: 500px;
 }
 
 .leftShadow {
@@ -45,4 +44,11 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+}
+
+
+@media (max-width: 768px) {
+    .wrapper {
+        height: 150px;
+    }
 }

@@ -1,13 +1,15 @@
 import axios from 'axios'
+import { redirect } from '../helpers/rediret.ts'
 
 export interface LogInApiProps {
-        name: string
+        username: string
         password: string
 }
 
-export const LogInApi = (props: LogInApiProps) => {
-    axios.post('api/token/refresh', {
-        name: props.name,
+export const LogInApi = async (props: LogInApiProps) => {
+
+    await axios.post('http://localhost:8000/login', {
+        name: props.username,
         password: props.password,
     })
     .then(response => {
@@ -15,6 +17,8 @@ export const LogInApi = (props: LogInApiProps) => {
             localStorage.setItem('accessToken', response.data.access)
 
             localStorage.setItem('refreshToken', response.data.refresh)
+
+            redirect('http://localhost:3000/Main')
     })
 
     .catch(error => console.error(error))

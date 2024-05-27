@@ -16,7 +16,7 @@ export const VideoContainer: React.FC<VideoContainerProps> = ({description, vide
         <div className = {styles.wrapper} >
             <video className = {styles.backVideo} autoPlay loop muted><source src={videoUrl} type="video/mp4"/>
             </video>
-            <text className = {styles.description} >{description}</text>
+            <span className = {styles.description} >{description}</span>
         </div>
 
     )   

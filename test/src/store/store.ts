@@ -1,12 +1,14 @@
 import {combineReducers, configureStore } from "@reduxjs/toolkit";
 import registrationReducer from './reducers/RegistrationSlice.ts'
 import formReducer from './reducers/RegistrationFormSlice.ts'
+import errorReducer from './reducers/ErrorSlice.ts'
 
 
 
 const rootReducer = combineReducers({
     registrationReducer,
-    formReducer
+    formReducer,
+    errorReducer
 })
 
 export const setupStore = () => {

@@ -5,7 +5,8 @@ import { Boop } from '../../../helpers/settingIconBoop.tsx';
 
 export const UserMenu: React.FC = () => {
 
-    const lvl = localStorage.getItem('lvl')
+    const lvl = localStorage.getItem('lvl')//Отображение уровня пользователя из бд
+    //Функция boop для анимации при наведении
 
     return (
     

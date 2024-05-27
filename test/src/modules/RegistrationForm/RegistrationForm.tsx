@@ -10,9 +10,11 @@ import  {animate, motion} from "framer-motion"
 
 export const RegistrationForm: React.FC = () => {
 
+    //Импорт redux для закрытия формы
     const {regClose} = registrationSlice.actions
     const dispatch = useAppDispatch()
 
+    //Привязка хука к форме
     let ref = React.createRef<HTMLDivElement>()
     useRemoveForm(ref, () => dispatch(regClose()))
 

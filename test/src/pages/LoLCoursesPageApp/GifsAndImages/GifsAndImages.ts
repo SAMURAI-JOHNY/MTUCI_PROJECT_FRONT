@@ -8,6 +8,7 @@ import champ4 from './Images/champ4.png'
 import gif1 from './Images/gif1.png'
 import gif2 from './Images/gif2.png'
 import gif3 from './Images/gif3.png'
+import image1_1 from './Images/image.png'
 
 
 
@@ -16,6 +17,8 @@ const image2: string = eazyBlock1_2
 const image3: string = eazyBlock1_1
 
 export const imagesBlock1: string[] = [image1, image2, image3]
+
+const picture1 = image1_1
 
 
 interface champsProps {
@@ -34,5 +37,6 @@ interface gifsProps {
 
 
 export const SVGmassive = {
-    imagesBlock1
+    imagesBlock1, picture1
+
 }
